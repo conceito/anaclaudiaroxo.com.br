@@ -6,6 +6,7 @@ _dev/
 tests/
 upl/
 nbproject/
+app/config/
 *.sublime-project
 *.sublime-workspace
 *.pydevproject
