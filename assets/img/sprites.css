@@ -1,0 +1,20 @@
+.sprites{ background:url("sprites.png") top left no-repeat; }
+.arrow-wb-l{ width:28px; height:55px; background-position:-5px -5px; }
+.arrow-wb-r{ width:28px; height:55px; background-position:-5px -65px; }
+.arrow-gb-l{ width:28px; height:55px; background-position:-5px -125px; }
+.arrow-gb-r{ width:28px; height:55px; background-position:-5px -185px; }
+.icon-place{ width:33px; height:49px; background-position:-5px -245px; }
+.icon-mail{ width:44px; height:33px; background-position:-5px -299px; }
+.arrow-wb-t{ width:55px; height:28px; background-position:-5px -337px; }
+.arrow-wb-b{ width:55px; height:28px; background-position:-5px -370px; }
+.arrow-gb-t{ width:55px; height:28px; background-position:-5px -403px; }
+.arrow-gb-b{ width:55px; height:28px; background-position:-5px -436px; }
+.arrow-gm-r{ width:10px; height:17px; background-position:-38px -5px; }
+.arrow-gm-l{ width:10px; height:17px; background-position:-38px -65px; }
+.arrow-gs-r{ width:7px; height:13px; background-position:-53px -5px; }
+.arrow-gs-l{ width:7px; height:13px; background-position:-53px -65px; }
+.arrow-gm-t{ width:17px; height:10px; background-position:-38px -125px; }
+.arrow-gm-b{ width:17px; height:10px; background-position:-38px -185px; }
+.arrow-gs-b{ width:13px; height:7px; background-position:-43px -245px; }
+.arrow-gs-t{ width:13px; height:7px; background-position:-5px -469px; }
+

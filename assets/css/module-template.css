@@ -1,0 +1,443 @@
+/*
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|    MODULES
+|---------------------------------------------------------------------------------
+*/
+
+/* The Nivo Slider styles */
+.nivoSlider {
+  position:relative;
+  width:100%;
+  height:auto;
+  overflow: hidden;
+}
+.nivoSlider img {
+  position:absolute;
+  top:0px;
+  left:0px;
+  max-width: none;
+}
+.nivo-main-image {
+  display: block !important;
+  position: relative !important; 
+  width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  border:0;
+  padding:0;
+  margin:0;
+  z-index:6;
+  display:none;
+  background:white; 
+  filter:alpha(opacity=0); 
+  opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+  display:block;
+  position:absolute;
+  z-index:5;
+  height:100%;
+  top:0;
+}
+.nivo-box {
+  display:block;
+  position:absolute;
+  z-index:5;
+  overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  background:#000;
+  color:#fff;
+  width:100%;
+  z-index:8;
+  padding: 5px 10px;
+  opacity: 0.8;
+  overflow: hidden;
+  display: none;
+  -moz-opacity: 0.8;
+  filter:alpha(opacity=8);
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+  padding:5px;
+  margin:0;
+}
+.nivo-caption a {
+  display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+  position:absolute;
+  top:45%;
+  z-index:9;
+  cursor:pointer;
+}
+.nivo-prevNav {
+  left:0px;
+}
+.nivo-nextNav {
+  right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+  text-align:center;
+  padding: 15px 0;
+}
+.nivo-controlNav a {
+  cursor:pointer;
+}
+.nivo-controlNav a.active {
+  font-weight:bold;
+}
+/*
+|=================================================================================
+|    Modulo | ...
+|---------------------------------------------------------------------------------
+*/
+.post-list{}
+
+.post-list li{}
+
+.post-list .post-item,
+.post-list .post-item:visited{
+    position: relative;
+    display: block;
+    border-bottom: #EEEEEE solid 1px;
+    padding: 20px 0 20px 15px;
+}
+
+.post-list .post-item .sprt{
+    position: absolute;
+    top: 22px;
+    left: 0px;
+}
+
+.post-list .post-item:hover{
+    text-decoration: none;
+    background-color: #F4F5F7;
+}
+
+.post-list .post-item strong{
+    text-transform: uppercase;
+}
+
+.post-list .small{
+    display: block;
+    font-size: 85%;
+}
+
+
+
+
+
+.header-deco{
+    background-color: rgba(0, 63, 55, 0.3);
+    height: 15px;
+    z-index: 10;
+    position: relative;
+}
+
+
+.sub-menu{}
+
+.sub-menu a,
+.sub-menu a:visited{
+    background-color: rgba(0, 63, 55, 0.1);
+    display: block;
+    padding: 8px 20px;
+    color: #2F423C;
+}
+
+.sub-menu a:hover{
+    background-color: rgba(0, 63, 55, 0.22);
+    text-decoration: none;
+}
+
+.sub-menu .active a{
+    font-weight: 700;
+    background-color: rgba(0, 63, 55, 0.23);
+    cursor: default;
+}
+
+
+
+
+
+
+.procedimentos-swiper {
+    position: relative;
+    padding: 0 50px;
+    margin: 50px 0;
+}
+
+.procedimentos-swiper .swiper-container{}
+
+.procedimentos-swiper .swiper-slide{
+}
+
+
+.procedimentos-swiper .arrow-left{
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    left: 0;
+}
+
+.procedimentos-swiper .arrow-right{
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    right: 0;
+}
+
+.procedimentos-swiper .block{
+    width: 140px;
+    height: 124px;
+    display: block;
+    overflow: hidden;  background-color: #003F37;  color: #fff;
+    position: relative;
+    margin: 0 10px 20px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+
+.procedimentos-swiper .block .figure{
+    position: relative;
+    z-index: 1;
+}
+.procedimentos-swiper .block .figure img{
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    
+}
+
+.procedimentos-swiper a.block:hover,
+.procedimentos-swiper a.block:active{
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    transform: translateY(5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.26);
+}
+
+.procedimentos-swiper .block:hover .figure img,
+.procedimentos-swiper .block:active .figure img{
+    -webkit-transform: scale(1.2);
+}
+
+
+.procedimentos-swiper .block .desc{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 46px;
+    background-color: #B8762E;
+    background-color: rgba(184, 118, 46, 0.89);
+}
+.procedimentos-swiper .block h2{
+    font-size: 1.1em;
+    line-height: 1.2em;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.procedimentos-swiper .block.master h2{
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    text-transform: uppercase;
+}
+
+.procedimentos-swiper .block.master{
+    text-align: right;
+    float: left;
+}
+
+/*
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|    TEMPLATE
+|---------------------------------------------------------------------------------
+*/
+
+.nivo-controlNav{
+    display: none;
+}
+
+.nivo-directionNav {}
+.nivo-directionNav a{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.34);
+    padding: 5px 5px 10px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.nivo-directionNav a:hover{
+    background-color: #fff;
+    color: #54796C;
+    text-decoration: none;
+}
+
+.nivo-directionNav .nivo-prevNav{
+    /* border-radius: 0 20px 20px 0; */
+}
+
+.nivo-directionNav .nivo-nextNav{
+    /* border-radius: 20px 0 0 20px; */
+}
+
+.page.links p{
+    border-bottom: #eee solid 1px;
+    padding: 0 0 10px;
+}
+.page.links p > a{
+    font-size: 85%;
+}
+
+
+.google-maps{
+    position: relative;
+    background: #eee;
+    height: 0;
+    padding-bottom: 40%;
+    border-bottom: #2F423C solid 3px;
+    margin: 0 0 10px;
+}
+
+.google-maps .gml:link,
+.google-maps .gml:visited{
+    background-color: #2F423C;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 1px 10px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+}
+
+.google-maps .gml:hover{}
+
+/* ==========================================================================
+   *
+   * mNNNNNNNNm     
+   * y````````y   
+   * y        s  
+   * y        s  
+   * y        s  
+   * y        s  
+   * d+++--+++d 
+   * NMMN//MMMN  
+   *
+   *
+   * PHONE ONLY !!!
+   ========================================================================== */
+
+@media all and (max-width: 768px) {
+    
+.procedimentos-swiper .block.master{
+    text-align: left;
+    float: none;
+}
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   *
+   * 
+   * +yyyyhhhhdddddddddms
+   * sh-..............-Nd      mmddddddddddddddddddddddddddmm
+   * sd`              .Md      M+                          /M
+   * sd`              .Md      M+                          /M
+   * sd`              .Md      M+                          /M
+   * sd`              .Md      M+                          /M
+   * yd`              .Md      M+                          /M
+   * yd`              .Md   +  M+                          /M
+   * yd`              .Md      MmddddddddddddddddddddddddddmM
+   * yd.              .Md      mNNNNNNNNNNNNNNNNNNNNNNNNNNNNm
+   * yd.              .Md      ```````````:dddddd/```````````
+   * sdhdddddddmmmmmmmmNy                /dMMMMMMm+          
+   *-------------------------------------------------------------------------
+   * TABLET and  UP
+   ========================================================================== */
+
+@media all and (min-width: 768px) {
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   *
+   *
+   * mmddddddddddddddddddddddddddmm
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * MmddddddddddddddddddddddddddmM
+   * mNNNNNNNNNNNNNNNNNNNNNNNNNNNNm
+   * ```````````:dddddd/```````````
+   *           /dMMMMMMm+          
+   *-------------------------------------------------------------------------
+   * DESKTOP
+   ========================================================================== */
+
+@media all and (min-width: 980px) {
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   *
+   *
+   * mmddddddddddddddddddddddddddddddddddddmm
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * MmddddddddddddddddddddddddddddddddddddmM
+   * mNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNm
+   * ````````````````:dddddd/````````````````
+   *             /dMMMMMMMMMMm+          
+   *-------------------------------------------------------------------------
+   * RUGE DESKTOP
+   ========================================================================== */
+
+@media all and (min-width: 1281px) {
+
+}/*/mediaquery*/

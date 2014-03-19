@@ -1,0 +1,602 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+
+.control-col-1-2{
+    float: left;
+    width: 50%;
+}
+/*
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|    BASE
+|=================================================================================
+*/
+.sprt{ background:url("../img/sprites.png") top left no-repeat; display:inline-block; vertical-align: middle; }
+.arrow-wb-l{ width:28px; height:55px; background-position:-5px -5px; }
+.arrow-wb-r{ width:28px; height:55px; background-position:-5px -65px; }
+.arrow-gb-l{ width:28px; height:55px; background-position:-5px -125px; }
+.arrow-gb-r{ width:28px; height:55px; background-position:-5px -185px; }
+.icon-place{ width:33px; height:49px; background-position:-5px -245px; }
+.icon-mail{ width:44px; height:33px; background-position:-5px -299px; }
+.arrow-wb-t{ width:55px; height:28px; background-position:-5px -337px; }
+.arrow-wb-b{ width:55px; height:28px; background-position:-5px -370px; }
+.arrow-gb-t{ width:55px; height:28px; background-position:-5px -403px; }
+.arrow-gb-b{ width:55px; height:28px; background-position:-5px -436px; }
+.arrow-gm-r{ width:10px; height:17px; background-position:-38px -5px; }
+.arrow-gm-l{ width:10px; height:17px; background-position:-38px -65px; }
+.arrow-gs-r{ width:7px; height:13px; background-position:-53px -5px; }
+.arrow-gs-l{ width:7px; height:13px; background-position:-53px -65px; }
+.arrow-gm-t{ width:17px; height:10px; background-position:-38px -125px; }
+.arrow-gm-b{ width:17px; height:10px; background-position:-38px -185px; }
+.arrow-gs-b{ width:13px; height:7px; background-position:-43px -245px; }
+.arrow-gs-t{ width:13px; height:7px; background-position:-5px -469px; }
+
+body{
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+}
+
+
+.to-top-wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.to-top:link,
+.to-top:visited{
+    display: inline-block;
+    border: #87B6A5 solid 1px;
+    border-bottom: none;
+    padding: 2px 10px;
+    font-size: 0.9em;
+}
+
+.to-top:hover{
+    background-color: #E9EEEC;
+    text-decoration: none;
+}
+
+.to-top .sprt{
+    margin-right: 6px;
+}
+
+
+label.error{
+    color: rgb(190, 18, 18);
+    margin-top: -10px;
+}
+
+/*
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|=================================================================================
+|    LAYOUT
+|---------------------------------------------------------------------------------
+*/
+
+#header{
+    background-color: #003F37;
+    background-image: url(../img/header-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#header .logo{
+    text-align: center;
+    padding: 30px;
+}
+
+
+#header .logo a{}
+
+
+#header .logo img{}
+
+.header-menu{
+    background: #EEF0F3;
+    text-align: center;
+}
+
+.header-menu ul{
+    margin: 0;
+}
+
+.header-menu li{
+    display: inline-block;
+}
+
+.header-menu a:link,
+.header-menu a:visited{
+    display: inline-block;
+    padding: 15px 10px;
+    color: #003F38;
+    font-size: 1.1em;
+}
+
+.header-menu a:hover{
+    background-color: #D8DFDE;
+    text-decoration: none;
+    color: #058375;
+}
+
+.header-menu a:active{}
+
+.header-menu .active a{
+    background-color: #ACC0BF;
+}
+
+
+
+.home-swiper {
+    position: relative;
+    padding: 0 50px;
+    margin: 30px 0;
+}
+
+.home-swiper .swiper-slide{
+    width: 350px;
+}
+
+
+.card,
+.card:link,
+.card:visited{
+    display: block;
+    background-color: #B8762E;
+    max-width: 268px;
+    min-height: 302px;
+    margin: 0 auto;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    margin: 15px 0;
+}
+
+.card:hover{
+    text-decoration: none;
+    -webkit-transform: translateY(5px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.28);
+}
+
+.card .figure {
+}
+
+.card .figure > img {
+    width: 100%;
+}
+
+.card .desc {
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.card .desc > h2 {
+    font-weight: 300;
+    font-size: 1.857142857142857em;
+    margin: 0.4em 0 0.1em;
+}
+
+.card .desc > p {
+    font-weight: 300;
+}
+
+.home-swiper .arrow-left{
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 0;
+}
+
+.home-swiper .arrow-right{
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    right: 0;
+}
+
+
+#footer{}
+
+#footer .divider{
+    border-bottom: #E2E2E2 solid 1px;
+    margin: 20px 0;
+    position: relative;
+}
+
+#footer .divider::after{
+    content:'';
+}
+
+#footer .divider::before{
+    content:'';
+    background: #eee;
+    position: relative;
+    height: 10px;
+    width: 84%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#footer .color-bar{
+    background-color: #85928C;
+}
+
+
+.credits{
+    background-color: #55625C;
+    color: #C7C7C7;
+    text-align: center;
+    padding: 15px;
+}
+
+
+.sidebar{}
+
+.main{
+    background-color: #fff;
+    
+}
+
+.content{
+    padding: 0 10px 30px;
+    position: relative;
+}
+
+
+.page-title{
+    background-color: #2F423C;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.57em;
+    line-height: 1.1em;
+    padding: 10px;
+}
+
+.page-title .sprt{
+    display: none;
+}
+
+
+.content-title{
+    background-color: rgba(153, 99, 38, 0.82);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5714em;
+    line-height: 1.2em;
+    padding: 20px;
+    margin: 0 0 .7em;
+    position: relative;
+    z-index: 10;
+}
+
+.content-title .light{
+    font-weight: 300;
+}
+
+.page-back,
+.page-back:visited{
+    display: block;
+    background-color: rgba(0, 63, 55, 0.3);
+    font-size: 1.3em;
+    padding: 10px 20px;
+}
+.page-back:hover{}
+
+
+.page-featured-img{
+    margin: -97px 0 10px 0;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 40%;
+}
+
+.page-featured-img img{
+    width: 100%;
+    max-width: none;
+}
+
+
+.accordion-heading .accordion-toggle .sprt{
+    margin-left: -23px;
+    margin-right: 3px;
+}
+
+/* ==========================================================================
+   *
+   * mNNNNNNNNm     
+   * y````````y   
+   * y        s  
+   * y        s  
+   * y        s  
+   * y        s  
+   * d+++--+++d 
+   * NMMN//MMMN  
+   *
+   *
+   * PHONE ONLY !!!
+   ========================================================================== */
+
+@media all and (max-width: 768px) {
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   *
+   * 
+   * +yyyyhhhhdddddddddms
+   * sh-..............-Nd      mmddddddddddddddddddddddddddmm
+   * sd`              .Md      M+                          /M
+   * sd`              .Md      M+                          /M
+   * sd`              .Md      M+                          /M
+   * sd`              .Md      M+                          /M
+   * yd`              .Md      M+                          /M
+   * yd`              .Md   +  M+                          /M
+   * yd`              .Md      MmddddddddddddddddddddddddddmM
+   * yd.              .Md      mNNNNNNNNNNNNNNNNNNNNNNNNNNNNm
+   * yd.              .Md      ```````````:dddddd/```````````
+   * sdhdddddddmmmmmmmmNy                /dMMMMMMm+          
+   *-------------------------------------------------------------------------
+   * TABLET and  UP
+   ========================================================================== */
+
+@media all and (min-width: 768px) {
+    
+.home-swiper .swiper-slide{
+    width: 310px;
+}
+
+.sidebar{
+    margin-top: 30px;
+}
+
+.main{
+    margin-top: 30px;
+    
+}
+
+
+.content{
+    padding: 0 30px 30px;
+}
+
+
+.page-title{
+    text-align: right;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.page-title .sprt{
+    display: block;
+    float: right;
+    margin-top: 20px;
+}
+
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   *
+   *
+   * mmddddddddddddddddddddddddddmm
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * M+                          /M
+   * MmddddddddddddddddddddddddddmM
+   * mNNNNNNNNNNNNNNNNNNNNNNNNNNNNm
+   * ```````````:dddddd/```````````
+   *           /dMMMMMMm+          
+   *-------------------------------------------------------------------------
+   * DESKTOP
+   ========================================================================== */
+
+@media all and (min-width: 980px) {
+
+.home-swiper .swiper-slide{
+    width: 282px;
+}
+
+
+
+.content{
+    padding: 0 60px 60px;
+}
+
+
+.page-title{
+    text-align: right;
+    overflow: hidden;
+    padding: 30px;
+}
+
+
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   *
+   *
+   * mmddddddddddddddddddddddddddddddddddddmm
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * M+                                    /M
+   * MmddddddddddddddddddddddddddddddddddddmM
+   * mNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNm
+   * ````````````````:dddddd/````````````````
+   *             /dMMMMMMMMMMm+          
+   *-------------------------------------------------------------------------
+   * RUGE DESKTOP
+   ========================================================================== */
+
+@media all and (min-width: 1281px) {
+    
+.home-swiper .swiper-slide{
+    /*width: 364px;*/
+}
+
+}/*/mediaquery*/
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
