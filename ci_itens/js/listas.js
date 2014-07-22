@@ -20,7 +20,7 @@ $(document).ready(function(){
 	
 	// retorna grupos do módulo para filtros
 	// plugin em: listas.js
-	if(jQuery.fn.filter_autocomplete && ~~CMS.modulo){
+	if(jQuery.fn.filter_autocomplete && CMS.modulo){
 		var modulo_id = parseInt(CMS.modulo.id);
 		$(".grupo-populate").filter_autocomplete({			
 			source: CMS.site_url+"cms/cmsutils/get_groups_by_json/"+modulo_id+'/'

@@ -1,4 +1,3 @@
-
 <?php
 
 /**
@@ -15,6 +14,8 @@ class Paginas extends Cms_Controller {
 
     function __construct() {
         parent::__construct();
+
+
 
         /*
          * FAZ VERIFICAÇÃO DE USUÁRIO

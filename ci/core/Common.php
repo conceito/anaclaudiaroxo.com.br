@@ -132,6 +132,8 @@ if ( ! function_exists('load_class'))
 
 		$name = FALSE;
 
+
+
 		// Look for the class first in the local application/libraries folder
 		// then in the native system/libraries folder
 		foreach (array(APPPATH, BASEPATH) as $path)
@@ -167,6 +169,8 @@ if ( ! function_exists('load_class'))
 			// self-referencing loop with the Excptions class
 			exit('Unable to locate the specified class: '.$class.'.php');
 		}
+
+//		var_dump($name);
 
 		// Keep track of what we just loaded
 		is_loaded($class);

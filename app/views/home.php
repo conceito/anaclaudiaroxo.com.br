@@ -1,7 +1,9 @@
 
 <div class="webdoor nivoSlider">
-	<img src="<?php echo img()?>webdoor1.jpg" alt="">
-	<img src="<?php echo img()?>webdoor2.jpg" alt="">
+	<img src="<?php echo img()?>webdoor1.jpg?1" alt="">
+	<img src="<?php echo img()?>webdoor4.jpg?1" alt="">
+    <img src="<?php echo img()?>webdoor3.jpg?1" alt="">
+<!--	<img src="--><?php //echo img()?><!--webdoor4.jpg" alt="">-->
 </div>
 
 <div id="page"class="clearfix">
@@ -24,7 +26,7 @@
 									</div>
 									<div class="desc">
 										<h2>Dra. Ana Claudia Roxo</h2>
-										<p>CRM 52778931<br>Saiba mais sobre a médica</p>
+										<p>CRM 52778931</p>
 									</div>
 								</a><!-- card -->
 							</div>

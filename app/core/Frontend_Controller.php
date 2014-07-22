@@ -30,15 +30,16 @@ class Frontend_Controller extends MY_Controller {
     function __construct() {
         parent::__construct();
 
+
         if(ENVIRONMENT == 'development' && !IS_AJAX){
-            $this->output->enable_profiler(TRUE);
+//            $this->output->enable_profiler(TRUE);
             
         } else {
          
             // admin logado não faz cache            
             if($this->phpsess->get('logado', 'cms') != true){
                 // ativa cache
-                $this->output->cache(60);
+//                $this->output->cache(60);
             }
             
         }
@@ -117,15 +118,19 @@ class Frontend_Controller extends MY_Controller {
         ));
         $this->tmp['json_vars'] = json_encode($this->json_vars);
 
-        if(ENVIRONMENT == 'development'){
-            $this->tmp['scripts'] = $this->scripts($JS, 'assets/js');
-            $this->tmp['scripts'] .= $this->scripts($this->JSlibs, 'libs/jquery');
-            $this->tmp['estilos'] = $this->estilos($CSS, 'assets/css');
-        } else {
-            $this->tmp['scripts'] = minify('js', $JS, 'assets/js');
-            $this->tmp['scripts'] .= minify('js', $this->JSlibs, 'libs/jquery');
-            $this->tmp['estilos'] = minify('css', $CSS, 'assets/css');
-        }
+//        if(ENVIRONMENT == 'development'){
+//            $this->tmp['scripts'] = $this->scripts($JS, 'assets/js');
+//            $this->tmp['scripts'] .= $this->scripts($this->JSlibs, 'libs/jquery');
+//            $this->tmp['estilos'] = $this->estilos($CSS, 'assets/css');
+//        } else {
+//            $this->tmp['scripts'] = minify('js', $JS, 'assets/js');
+//            $this->tmp['scripts'] .= minify('js', $this->JSlibs, 'libs/jquery');
+//            $this->tmp['estilos'] = minify('css', $CSS, 'assets/css');
+//        }
+
+        $this->tmp['scripts'] = $this->scripts($JS, 'assets/js');
+        $this->tmp['scripts'] .= $this->scripts($this->JSlibs, 'libs/jquery');
+        $this->tmp['estilos'] = $this->estilos($CSS, 'assets/css');
         
         
 

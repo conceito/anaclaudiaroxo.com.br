@@ -11,14 +11,33 @@
 				</h2>
 
 				<ul class="unstyled sub-menu">
-					<?php 
-					if(isset($cats) && $cats):
-						foreach ($cats as $c):
+
+
+                    <?php
+					if(isset($catsProced) && $catsProced):
+                        ?>
+                        <li class="category">Procedimentos</li>
+                        <?php
+						foreach ($catsProced as $c):
 					?>
 					<li class="<?php echo $c['active'] ?>">
 						<a href="<?php echo site_url($c['full_uri'])?>"><?php echo $c['titulo'] ?></a>
 					</li>
 					<?php 
+						endforeach;
+					endif;
+
+
+					if(isset($catsOthers) && $catsOthers):
+                        ?>
+                        <li class="category">Outros</li>
+                        <?php
+						foreach ($catsOthers as $c):
+					?>
+					<li class="<?php echo $c['active'] ?>">
+						<a href="<?php echo site_url($c['full_uri'])?>"><?php echo $c['titulo'] ?></a>
+					</li>
+					<?php
 						endforeach;
 					endif;
 					?>

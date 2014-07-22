@@ -1,11 +1,12 @@
 #################
 ## Eclipse
 #################
-
+.idea/
 _dev/
 tests/
 upl/arqs/*
 upl/imgs/*
+app/logs/
 nbproject/
 app/config/
 *.sublime-project

@@ -64,6 +64,8 @@
 		require(APPPATH.'config/constants.php');
 	}
 
+
+
 /*
  * ------------------------------------------------------
  *  Define a custom error handler so we can log PHP errors
@@ -302,6 +304,8 @@
  *  Instantiate the requested controller
  * ------------------------------------------------------
  */
+//var_dump(new $class());
+//exit;
 	// Mark a start point so we can benchmark the controller
 	$BM->mark('controller_execution_time_( '.$class.' / '.$method.' )_start');
 
@@ -313,6 +317,7 @@
  * ------------------------------------------------------
  */
 	$EXT->_call_hook('post_controller_constructor');
+
 
 /*
  * ------------------------------------------------------

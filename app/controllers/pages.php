@@ -51,7 +51,7 @@ class Pages extends Frontend_Controller {
     public function display($page_id = ''){
         
         // shortcodes devem ser inicializados primeiro
-        $this->cms_conteudo->shortcode_reg(array('slide'));
+        $this->cms_conteudo->shortcode_reg(array('slide', 'page_featured_img'));
         
         // breadcrumb
         // $this->load->library('breadcrumb'); // autoload        

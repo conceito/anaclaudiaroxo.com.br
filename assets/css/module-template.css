@@ -163,6 +163,11 @@
 
 .sub-menu{}
 
+.sub-menu .category{
+    background-color: rgba(153, 99, 38, 0.82);  display: block;  padding: 8px 20px;  
+    color: #FFFFFF;
+}
+
 .sub-menu a,
 .sub-menu a:visited{
     background-color: rgba(0, 63, 55, 0.1);
@@ -325,6 +330,12 @@
 }
 .page.links p > a{
     font-size: 85%;
+}
+
+.page.links p > img{
+    width: 100px;
+    margin: 0 20px 10px 0;
+    float: left;
 }
 
 

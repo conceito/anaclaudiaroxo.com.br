@@ -10,10 +10,12 @@
  * @access public
  * */
 
+//var_dump(is_file(APPPATH . 'libraries/widgets/Cms_img_choose_interface.php'));
+//exit;
+//require APPPATH . 'libraries/widgets/Cms_img_choose_interface.php';
 
-require APPPATH . 'libraries/widgets/Cms_img_choose_interface.php';
-
-class Posts_model extends CI_Model implements Cms_img_choose_interface {
+//class Posts_model extends CI_Model implements Cms_img_choose_interface {
+class Posts_model extends CI_Model {
 
     /**
      * Meta dados registrados
@@ -24,7 +26,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
         array('meta_key' => 'my-test-graph', 'meta_type' => '', 'meta_value' => ''),
     );
     
-    function __construct() {
+    public function __construct() {
         parent::__construct();
     }
 
@@ -36,7 +38,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param array $modulo array dados do módulo
      * @return
      */
-    function lista_conteudos($v, $tipo = 'conteudo', $modulo = array()) {
+    public function lista_conteudos($v, $tipo = 'conteudo', $modulo = array()) {
         // -- trata as variaveis --//
         $pps = $this->config->item('pagination_limits');       
         $pp = ($v['pp'] == '') ? $pps[0] : $v['pp']; // por página
@@ -191,7 +193,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * Faz busca pelos grupos recursivamente
      * Não tem paginação
      */
-    function lista_grupos($uriVars) {
+    public function lista_grupos($uriVars) {
         
         $this->db->where('grupo', 0);
         $this->db->where('rel', 0); // primeiro nível
@@ -219,7 +221,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * Pesquisa recursivamente pelos grupos do módulo
      * @param <type> $grupo_id
      */
-    function _get_recursive_grupos($grupo_id, $level = 0) {
+    public function _get_recursive_grupos($grupo_id, $level = 0) {
 
         $this->db->where('rel', $grupo_id); // sub nível
         $this->db->where('grupo', 0);
@@ -246,7 +248,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
     /**
      * Monta a hierarquia dos grupos e monta um combobox
      */
-    function getGrupoComboHierarchy($uriVars) {
+    public function getGrupoComboHierarchy($uriVars) {
 
         $hierarchy = $this->lista_grupos($uriVars);
 
@@ -299,7 +301,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param <type> $indexArray nome do indice do array que é o array multi
      * @return array
      */
-    function flatMultidimensionalArray($multiArray, $indexArray) {
+    public function flatMultidimensionalArray($multiArray, $indexArray) {
 
         $this->saida = array();
 
@@ -336,7 +338,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param <type> $multiArray
      * @param <type> $indexArray
      */
-    function flatMultidimensionalArrayRecursive($multiArray, $indexArray) {
+    public function flatMultidimensionalArrayRecursive($multiArray, $indexArray) {
 
         foreach ($multiArray as $arr) {
 
@@ -353,7 +355,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
         }
     }
 
-    function getGrupoParents($grupo_id, $modulo_id) {
+    public function getGrupoParents($grupo_id, $modulo_id) {
 
         $hierarchy = $this->lista_grupos(array('co' => $modulo_id));
 
@@ -401,7 +403,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param <type> $arrayDoGrupo
      * @return <type>
      */
-    function _parse_grupo($arrayDoGrupo) {
+    public function _parse_grupo($arrayDoGrupo) {
 
         if (count($arrayDoGrupo) == 0)
             return false;
@@ -440,7 +442,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * Faz busca pelos grupos recursivamente
      * Não tem paginação
      */
-    function lista_tags($uriVars) {
+    public function lista_tags($uriVars) {
         
         $this->db->where('grupo', 0);
         $this->db->where('rel', 0); // primeiro nível
@@ -470,7 +472,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param mixed $array
      * @return
      */
-    function parse_lista_conteudos($array, $modulo = array()) {
+    public function parse_lista_conteudos($array, $modulo = array()) {
         if (count($array) == 0)
             return false;
         // percorre array
@@ -544,7 +546,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param string $tipo Para fazer alguma distinção no futuro
      * @return array Array com as duas cores array('grupoCor1' => #cor, 'grupoCor2' => #cor)
      */
-    function get_grupo_cores($tagdecor, $tipo = 'conteudo') {
+    public function get_grupo_cores($tagdecor, $tipo = 'conteudo') {
         $tagdecor = trim($tagdecor);
         $cores = (strlen($tagdecor) > 6) ? explode('|', $tagdecor) : array("", "");
         $row['cor1'] = $cores[0];
@@ -556,7 +558,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
     /**
      * Dados de UM omentário de um conteúdo
      * */
-    function comentario_dados($id_cont) {
+    public function comentario_dados($id_cont) {
         $this->db->where('id', $id_cont);
         $sql = $this->db->get('cms_comentarios');
         return $sql->row_array();
@@ -565,7 +567,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
     /**
      * Todos os comentários de um conteúdo
      * */
-    function comentarios_dados($id_cont) {
+    public function comentarios_dados($id_cont) {
         $this->db->where('conteudo_id', $id_cont);
         $this->db->order_by('data desc');
         $this->db->order_by('hora desc');
@@ -579,7 +581,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param mixed $array
      * @return
      */
-    function parse_comentarios_dados($array) {
+    public function parse_comentarios_dados($array) {
         if (count($array) == 0)
             return false;
         // percorre array
@@ -605,7 +607,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param array $var Opções na uri, como: id, co
      * @return bool
      */
-    function grupo_salva($var) {
+    public function grupo_salva($var) {
         // - salva os dados do menu principal Raiz
         $titulo = trim($this->input->post('titulo'));
         $nick = trim($this->input->post('nick'));
@@ -652,7 +654,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
         return $sql;
     }
 
-    function conteudo_salva($var) {
+    public function conteudo_salva($var) {
         
 //        dd($this->input->post());
         // - salva os dados do menu principal Raiz
@@ -811,7 +813,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param array|int $var
      * @return bool
      */
-    function set_tag_conteudo($listaTagIds = array(), $var = array()) {
+    public function set_tag_conteudo($listaTagIds = array(), $var = array()) {
 
         if (!is_array($var)) {
             $id = $var;
@@ -848,7 +850,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param array $var Opções na uri, como: id, co
      * @return bool
      */
-    function tag_salva($var) {
+    public function tag_salva($var) {
         // - dados
         $titulo = trim($this->input->post('titulo'));
         $nick = trim($this->input->post('nick'));
@@ -895,7 +897,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param mixed $var
      * @return
      */
-    function conteudo_dados($var) {
+    public function conteudo_dados($var) {
         $dd = $this->cms_libs->conteudo_dados($var);
         if (!$dd)
             return false;
@@ -929,7 +931,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param int $moduloID
      * @return array
      */
-    function get_modulo_tags($moduloID) {
+    public function get_modulo_tags($moduloID) {
 
         // pesquisa as tags deste conteúdo
 
@@ -953,7 +955,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * @param int $conteudoID
      * @return array
      */
-    function get_conteudo_tags($conteudoID) {
+    public function get_conteudo_tags($conteudoID) {
 
 
         // pesquisa as tags deste conteúdo e combina com a tabela cms_conteudo
@@ -996,7 +998,7 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
      * 
      * @return string
      */
-    function get_view_tags() {
+    public function get_view_tags() {
 
         $var = $this->uri->to_array(array('co', 'id'));
         $conteudoID = $var['id'];
@@ -1134,5 +1136,3 @@ class Posts_model extends CI_Model implements Cms_img_choose_interface {
     }
 
 }
-
-?>

@@ -11,6 +11,8 @@ class Contato extends Frontend_Controller
     {
         parent::__construct();
 
+
+
         $this->load->model('contato_model', 'contato');
     }
 
